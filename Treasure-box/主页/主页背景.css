@@ -1,0 +1,46 @@
+.head {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 100vh;
+  text-decoration: none;
+}
+
+.img1 {
+  background-image: url(./image/1.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  border: black solid 5px;
+}
+
+.img2 {
+  background-image: url(./image/2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  border: black solid 5px;
+}
+
+.img3 {
+  background-image: url(./image/3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  border: black solid 5px;
+}
+
+.img4 {
+  background-image: url(./image/4.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  border: black solid 5px;
+}
+
+.img5 {
+  background-image: url(./image/5.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  border: black solid 5px;
+}

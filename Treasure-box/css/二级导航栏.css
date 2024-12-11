@@ -1,0 +1,132 @@
+body {
+  background-image: linear-gradient(60deg, #0d0f11 0%, #22272b 100%);
+  background-attachment: fixed;
+}
+
+/* 主导航栏样式 */
+.主导航栏 {
+  position: fixed;
+  /* 固定定位 */
+  top: 0;
+  /* 导航栏顶部紧贴浏览器窗口顶部 */
+  left: 0;
+  /* 导航栏左边紧贴浏览器窗口左边，可以根据二级导航栏的对齐方式调整 */
+  width: 100%;
+  /* 导航栏宽度 */
+  background-color: rgb(24, 29, 52);
+  /* 导航栏背景颜色 */
+  z-index: 1000;
+  /* 确保导航栏在页面其他内容的上方 */
+}
+
+/* 重置导航栏的默认样式 */
+.主导航栏 ul {
+  list-style: none;
+  /* 移除列表项前的项目符号 */
+  padding: 0;
+  /* 移除默认内边距 */
+  margin: 0;
+  /* 移除默认外边距 */
+}
+
+/* 主导航栏样式 */
+.一级导航栏 {
+  display: flex;
+  /* 使用弹性盒子布局 */
+  justify-content: flex-end;
+  /* 主导航栏靠右对齐 */
+  background-color: rgb(24, 29, 52);
+  /* 设置背景颜色 */
+}
+
+/* 主导航项样式 */
+.一级导航栏 > li {
+  float: left;
+  /* 使主导航项水平排列 */
+  position: relative;
+  /* 为绝对定位的二级导航项提供参考 */
+}
+
+/* 主导航链接样式 */
+.一级导航栏 a {
+  display: block;
+  /* 使链接占据整个列表项空间 */
+  padding: 15px 20px;
+  /* 设置内边距 */
+  color: white;
+  /* 设置文字颜色 */
+  text-decoration: none;
+  /* 移除下划线 */
+  background-color: rgb(24, 29, 52);
+  /* 设置链接背景颜色 */
+  font-size: 26px;
+}
+
+/* 主导航链接悬停效果 */
+.一级导航栏 a:hover {
+  background-image: linear-gradient(to right, rgb(24, 29, 52), rgb(23, 32, 61));
+  /* 鼠标悬停时的背景颜色 */
+}
+
+/* 二级导航样式 */
+.二级导航栏 {
+  display: none;
+  /* 默认不显示 */
+  position: absolute;
+  /* 绝对定位 */
+  left: 0;
+  /* 与主导航项左对齐 */
+  /* 放置在主导航项的正下方 */
+  top: 100%;
+  /* 设置二级导航的宽度与其父级主导航项的宽度一致 */
+  width: 100%;
+  background-color: #555;
+  /* 设置背景颜色 */
+  padding: 10px 0;
+  /* 设置上下内边距 */
+  z-index: 1000;
+  /* 设置层级，确保在顶层显示 */
+}
+
+/* 二级导航项样式 */
+.二级导航栏 li {
+  clear: both;
+  /* 清除浮动，确保二级导航项垂直排列 */
+}
+
+/* 二级导航链接样式 */
+.二级导航栏 a {
+  display: block;
+  /* 使链接占据整个列表项空间 */
+  padding: 10px 15px;
+  /* 设置内边距 */
+  color: white;
+  /* 设置文字颜色 */
+  text-decoration: none;
+  /* 移除下划线 */
+  border-bottom: 1px solid #666;
+  /* 添加下边框以区分链接 */
+  font-size: 18px;
+}
+
+/* 二级导航链接悬停效果 */
+.二级导航栏 a:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(19, 134, 102),
+    rgb(41, 145, 115),
+    rgb(132, 231, 203)
+  );
+  /* 鼠标悬停时的背景颜色 */
+}
+
+/* 鼠标悬停在主导航项上时显示二级导航 */
+.一级导航栏 li:hover .二级导航栏 {
+  display: block;
+  /* 显示二级导航 */
+}
+
+/* 在鼠标离开导航项时隐藏二级导航栏 */
+.一级导航栏 li:not(:hover) .二级导航栏 {
+  display: none;
+}
